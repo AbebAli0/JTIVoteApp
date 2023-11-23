@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">JTIVoteApp</string>
-
+    <string name="api_server">http://192.168.1.5/JTIVoteApp/login/</string>
 </resources>

@@ -11,7 +11,7 @@
        </KeyFrameSet>
     </Transition>
 
-    <ConstraintSet android:id="@+id/start">
+    <ConstraintSet>
         <Constraint
             android:layout_height="66dp"
             android:layout_width="347dp"
