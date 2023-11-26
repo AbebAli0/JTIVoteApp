@@ -62,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         String nim = etnim.getText().toString();
         String password = etpassword.getText().toString();
         if (nim.isEmpty() || password.isEmpty()) {
-            alertFail("Isi NIM atau Password");
+            alertFail("Login Gagal");
         }else {
             sendLogin(nim, password);
         }
@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
-    private void sendLogin(String nim, String pass) {
+    private void sendLogin(String nim, String password) {
         String BASE_URL = ApiClass.Login_API;
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -79,7 +79,7 @@ public class LoginActivity extends AppCompatActivity {
                 .build();
 
         LoginApiService login = retrofit.create(LoginApiService.class);
-        Call<LoginResponse> call = login.login(nim, pass);
+        Call<LoginResponse> call = login.login(nim, password);
 
         call.enqueue(new Callback<LoginResponse>() {
             @Override
