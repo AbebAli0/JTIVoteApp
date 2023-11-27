@@ -41,6 +41,12 @@ public class LoginActivity extends AppCompatActivity {
     ImageView btnLogin;
 
     @Override
+    public void onBackPressed() {
+        // Tidak melakukan apa-apa saat tombol back ditekan
+        // Hapus super.onBackPressed(); jika ingin memblock tombol back
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
