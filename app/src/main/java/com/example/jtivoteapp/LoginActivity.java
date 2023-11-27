@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ImageView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,8 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText etnim, etpassword;
 
-    private Button Login;
-
+    ImageView btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,23 +46,26 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         etnim = findViewById(R.id.etnim);
         etpassword = findViewById(R.id.etpassword);
-        Login = findViewById(R.id.btnLogin);
+        btnLogin = findViewById(R.id.btnLogin);
+        // initialize imageView
+        // with method findViewById()
 
 
-        Login.setOnClickListener(new View.OnClickListener() {
+        // Apply OnClickListener  to imageView to
+        // switch from one activity to another
+        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 checkLogin();
             }
         });
     }
 
-
     private void checkLogin(){
         String nim = etnim.getText().toString();
         String password = etpassword.getText().toString();
         if (nim.isEmpty() || password.isEmpty()) {
-            alertFail("Login Gagal");
+            alertFail("Nim atau Password Kosong!");
         }else {
             sendLogin(nim, password);
         }
@@ -85,14 +88,18 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse loginResponse = response.body();
-                if (loginResponse != null && loginResponse.getMessage().equals("Login berhasil")) {
-                    // Login successful
-                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
-                    startActivity(intent);
-                    Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
-                } else {
-                    // Login failed
-                    alertFail("Login failed");
+                Log.d("Response: ", response.toString());
+                if(response.isSuccessful()){
+
+                    if (loginResponse != null && loginResponse.getMessage().equals("Login berhasil")) {
+                        // Login successful
+                        Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
+                        startActivity(intent);
+                        Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
+                    } else {
+                        // Login failed
+                        alertFail("Login gagal");
+                    }
                 }
             }
 

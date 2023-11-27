@@ -8,36 +8,21 @@
     android:background="@drawable/settings"
     android:gravity="center"
     app:layoutDescription="@xml/activity_settings_scene2"
-    tools:context=".MainActivity">
-
-    <ImageButton
-        android:id="@+id/button5"
-        android:layout_width="467dp"
-        android:layout_height="67dp"
-        android:src="@drawable/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="459dp"
-        android:layout_height="503dp"
-        android:text="Logout"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.535" />
+    tools:context=".SettingsActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="15dp"
-        android:layout_height="28dp"
-        app:srcCompat="@drawable/log"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="122dp" />
-    </androidx.constraintlayout.motion.widget.MotionLayout>
+        android:id="@+id/logoutBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logout"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="299dp" />
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/back"
+        tools:layout_editor_absoluteY="69dp" />
+</androidx.constraintlayout.motion.widget.MotionLayout>

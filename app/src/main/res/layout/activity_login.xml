@@ -8,38 +8,46 @@
     android:background="@drawable/login"
     android:gravity="center"
     app:layoutDescription="@xml/activity_login_scene"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <EditText
         android:id="@+id/etnim"
-        android:layout_width="324dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="252dp"
+        android:layout_width="248dp"
+        android:layout_height="45dp"
         android:ems="10"
+        android:hint="Nim"
         android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
 
     <EditText
         android:id="@+id/etpassword"
-        android:layout_width="309dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="248dp"
+        android:layout_height="45dp"
         android:ems="10"
-        android:hint=""
+        android:hint="Password"
         android:inputType="textPassword"
-        app:layout_constraintTop_toBottomOf="@+id/etnim"
-        tools:layout_editor_absoluteX="44dp" />
-
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="347dp"
-        android:layout_height="66dp"
-        android:text="Log in"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etpassword"
-        app:layout_constraintVertical_bias="0.097"
-        tools:layout_editor_absoluteX="32dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.456" />
+
+    <ImageView
+        android:id="@+id/btnLogin"
+        android:layout_width="314dp"
+        android:layout_height="64dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575"
+        app:srcCompat="@drawable/lgnbutton" />
 </androidx.constraintlayout.motion.widget.MotionLayout>
