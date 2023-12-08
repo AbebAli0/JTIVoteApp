@@ -42,8 +42,6 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        // Tidak melakukan apa-apa saat tombol back ditekan
-        // Hapus super.onBackPressed(); jika ingin memblock tombol back
     }
 
     @Override
@@ -53,12 +51,10 @@ public class LoginActivity extends AppCompatActivity {
         etnim = findViewById(R.id.etnim);
         etpassword = findViewById(R.id.etpassword);
         btnLogin = findViewById(R.id.btnLogin);
-        // initialize imageView
-        // with method findViewById()
 
 
-        // Apply OnClickListener  to imageView to
-        // switch from one activity to another
+
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -104,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
                     } else {
                         // Login failed
-                        alertFail("Login gagal");
+                        alertFail("Nim atau Password Salah");
                     }
                 }
             }

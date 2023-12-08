@@ -16,7 +16,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ElectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".VotingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CandidateActivity"
             android:exported="false" />
         <activity
             android:name=".KajurActivity"

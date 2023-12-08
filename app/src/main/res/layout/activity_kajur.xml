@@ -7,7 +7,116 @@
     android:layout_height="match_parent"
     android:background="@drawable/votekajur"
     android:gravity="center"
-    tools:context=".KajurActivity"> />
+    tools:context=".KajurActivity"><![CDATA[ />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]]>
+
+    <LinearLayout
+        android:id="@+id/candidate1Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45">
+
+        <ImageView
+            android:id="@+id/candidate1Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/example" />
+
+        <TextView
+            android:id="@+id/candidate1Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kandidat 1" />
+
+        <Button
+            android:id="@+id/Candidate1Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/candidate3Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.663">
+
+        <ImageView
+            android:id="@+id/candidate3Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/example" />
+
+        <TextView
+            android:id="@+id/candidate3Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kandidat 3" />
+
+        <Button
+            android:id="@+id/Candidate3Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/candidate4Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76">
+
+        <ImageView
+            android:id="@+id/candidate4Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/example" />
+
+        <TextView
+            android:id="@+id/candidate4Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kandidat 4" />
+
+        <Button
+            android:id="@+id/Candidate4Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote" />
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/listBtn"
@@ -21,6 +130,8 @@
         app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@drawable/list" />
 
+    <!-- Kandidat 1 -->
+
     <ImageView
         android:id="@+id/viewallBtn"
         android:layout_width="wrap_content"
@@ -32,4 +143,39 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.115"
         app:srcCompat="@drawable/viewall" />
+
+    <LinearLayout
+        android:id="@+id/candidate2Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.563">
+
+        <ImageView
+            android:id="@+id/candidate2Image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/example" />
+
+        <TextView
+            android:id="@+id/candidate2Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kandidat 2" />
+
+        <Button
+            android:id="@+id/Candidate2Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote" />
+
+    </LinearLayout>
+
+    <!-- Kandidat 2, Kandidat 3, dan Kandidat 4 -->
+    <!-- Lakukan hal yang serupa untuk kandidat-kandidat lainnya -->
+    <!-- Ganti @+id, @drawable, dan teks sesuai dengan masing-masing kandidat -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

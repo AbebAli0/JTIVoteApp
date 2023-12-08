@@ -23,21 +23,16 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
 
-        // initialize imageView
-        // with method findViewById()
+
         kahimBtn = findViewById(R.id.kahimBtn);
         kahmjtiBtn = findViewById(R.id.kahmtjiBtn);
         kajurBtn = findViewById(R.id.kajurBtn);
         listBtn = findViewById(R.id.listBtn);
 
-        // Apply OnClickListener  to imageView to
-        // switch from one activity to another
+
         kahimBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent class will help to go to next activity using
-                // it's object named intent.
-                // SecondActivty is the name of new created EmptyActivity.
                 Intent intent = new Intent(DashboardActivity.this, KahimActivity.class);
                 startActivity(intent);
             }
@@ -45,9 +40,6 @@ public class DashboardActivity extends AppCompatActivity {
         kahmjtiBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Intent class will help to go to next activity using
-                // it's object named intent.
-                // SecondActivty is the name of new created EmptyActivity.
                 Intent intent = new Intent(DashboardActivity.this, KahmjtiActivity.class);
                 startActivity(intent);
             }

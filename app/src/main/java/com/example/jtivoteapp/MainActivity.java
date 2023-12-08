@@ -8,6 +8,13 @@ import android.os.Bundle;
 import android.os.Handler;
 public class MainActivity extends AppCompatActivity {
     private static final long SPLASH_TIME_OUT = 5000;
+
+    @Override
+    public void onBackPressed() {
+        // Tidak melakukan apa-apa saat tombol back ditekan
+        // Hapus super.onBackPressed(); jika ingin memblock tombol back
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
