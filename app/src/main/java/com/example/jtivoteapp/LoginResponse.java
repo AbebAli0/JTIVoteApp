@@ -4,7 +4,9 @@ import com.google.gson.annotations.SerializedName;
 public class LoginResponse {
 
     ModelLogin model;
-    String message;
+    private boolean success;
+    private int userId;
+    private String message;
 
     public ModelLogin getModel() {
         return model;
@@ -26,4 +28,12 @@ public class LoginResponse {
         this.model = model;
         this.message = message;
     }
+    public int getUserId() {
+        return userId;
+    }
+    public boolean isSuccess() {
+        return success;
+    }
+
 }
+

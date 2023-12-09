@@ -90,28 +90,28 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 LoginResponse loginResponse = response.body();
-                Log.d("Response: ", response.toString());
-                if(response.isSuccessful()){
-
+                if (response.isSuccessful()) {
                     if (loginResponse != null && loginResponse.getMessage().equals("Login berhasil")) {
-                        // Login successful
+                        int userId = loginResponse.getUserId(); // Dapatkan user_id
+                        saveLoggedInUser(userId); // Simpan user_id ke SharedPreferences setelah login berhasil
                         Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                         startActivity(intent);
                         Toast.makeText(LoginActivity.this, loginResponse.getMessage(), Toast.LENGTH_LONG).show();
                     } else {
-                        // Login failed
                         alertFail("Nim atau Password Salah");
                     }
+                } else {
+                    // Tangani respons gagal dari server
+                    Toast.makeText(LoginActivity.this, "Gagal melakukan login", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                Toast.makeText(LoginActivity.this,t.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
-
     private void alertFail(String s){
         new AlertDialog.Builder(this)
                 .setTitle("Failed")
@@ -124,5 +124,11 @@ public class LoginActivity extends AppCompatActivity {
                     }
                 }).show();
     }
-
+    // Setelah berhasil login
+    private void saveLoggedInUser(int userId) {
+        SharedPreferences sharedPreferences = getSharedPreferences("user_prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("loggedInUserId", userId);
+        editor.apply();
+    }
 }
