@@ -24,26 +24,26 @@ public class DashboardActivity extends AppCompatActivity {
 
 
 
-        kahimBtn = findViewById(R.id.kahimBtn);
-        kahmjtiBtn = findViewById(R.id.kahmtjiBtn);
+//        kahimBtn = findViewById(R.id.kahimBtn);
+//        kahmjtiBtn = findViewById(R.id.kahmtjiBtn);
         kajurBtn = findViewById(R.id.kajurBtn);
         listBtn = findViewById(R.id.listBtn);
 
 
-        kahimBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, KahimActivity.class);
-                startActivity(intent);
-            }
-        });
-        kahmjtiBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DashboardActivity.this, KahmjtiActivity.class);
-                startActivity(intent);
-            }
-        });
+//        kahimBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(DashboardActivity.this, KahimActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        kahmjtiBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(DashboardActivity.this, KahmjtiActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         kajurBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
